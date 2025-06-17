@@ -1,0 +1,223 @@
+/* Reset dan dasar layout */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body, html {
+  height: 100%;
+  background: linear-gradient(135deg, #0a3d62, #3c6382);
+  color: #e0e0e0;
+  overflow-x: hidden;
+}
+
+.stApp {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 40px 60px;
+  max-width: 100vw;
+}
+
+/* Header */
+.header-container {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 40px;
+  user-select: none;
+}
+
+.laliga-logo {
+  width: 100px;
+  height: auto;
+  filter: drop-shadow(0 0 10px rgba(255,255,255,0.6));
+}
+
+h1 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: transparent;
+  background: linear-gradient(90deg, #74b9ff, #a29bfe);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  flex-grow: 1;
+  margin: 0;
+}
+
+/* Subtitle */
+.stMarkdown p {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  color: #dfe6e9;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Area input */
+.input-area {
+  display: flex;
+  flex-direction: row;
+  max-width: 750px;
+  margin: 0 auto 50px auto;
+  gap: 30px;
+  justify-content: center;
+}
+
+/* Selectbox styling */
+div[data-baseweb="select"] {
+  background-color: rgba(255, 255, 255, 0.85) !important;
+  border-radius: 16px !important;
+  padding: 6px 8px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+  transition: background 0.3s ease;
+}
+
+div[data-baseweb="select"] > div {
+  color: #0b2545 !important;
+  font-size: 1.2rem !important;
+  font-weight: 700 !important;
+}
+
+div[data-baseweb="select"] div:hover {
+  background-color: rgba(255, 255, 255, 0.6) !important;
+  color: #192a56 !important;
+}
+
+.css-1wa3eu0-placeholder {
+  color: #576574 !important;
+}
+
+/* Button prediksi */
+.stButton > button {
+  background: linear-gradient(90deg, #3867d6, #a29bfe);
+  border: none;
+  border-radius: 18px;
+  color: #f1f2f6;
+  font-weight: 900;
+  font-size: 1.9rem;
+  padding: 22px 0;
+  cursor: pointer;
+  box-shadow: 0 0 40px rgba(162, 155, 254, 0.9);
+  transition: background 0.4s ease, color 0.4s ease;
+  user-select: none;
+  width: 100%;
+}
+
+.stButton > button:hover {
+  background: linear-gradient(90deg, #a29bfe, #3867d6);
+  color: #dfe6e9;
+  box-shadow: 0 0 60px rgba(162, 155, 254, 1);
+}
+
+/* Hasil prediksi */
+.result-container {
+  max-width: 750px;
+  margin: 0 auto 40px auto;
+  background: rgba(255,255,255,0.18);
+  border-radius: 28px;
+  padding: 50px 40px;
+  box-shadow: 0 0 35px rgba(162, 155, 254, 0.7);
+  text-align: center;
+  user-select: none;
+}
+
+.result-container h2 {
+  font-size: 3.5rem;
+  margin-bottom: 2rem;
+  letter-spacing: 6px;
+  font-weight: 900;
+  color: #dfe6e9;
+}
+
+.prediction {
+  color: #3867d6;
+  font-weight: 900;
+  font-size: 6rem;
+  text-shadow:
+    0 0 25px #3867d6,
+    0 0 35px #a29bfe;
+  margin: 0;
+}
+
+/* Tabel rata-rata fitur */
+.feature-avg-container {
+  max-width: 750px;
+  margin: 0 auto 60px auto;
+  padding: 30px 25px;
+  background: rgba(255,255,255,0.12);
+  border-radius: 24px;
+  box-shadow: 0 0 30px rgba(162, 155, 254, 0.5);
+  user-select: none;
+}
+
+.feature-avg-container h3 {
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #dfe6e9;
+  text-align: center;
+}
+
+.feature-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #e0e0e0;
+}
+
+.feature-table th, .feature-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+  text-align: center;
+}
+
+.feature-table th {
+  background: linear-gradient(90deg, #74b9ff, #a29bfe);
+  color: #fff;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+}
+
+.feature-table tr:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 35px 0;
+  font-size: 1.4rem;
+  color: #ccc;
+  user-select: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  margin-top: auto;
+}
+
+/* Responsif */
+@media (max-width: 900px) {
+  h1 {
+    font-size: 2.8rem;
+    letter-spacing: 5px;
+  }
+  .prediction {
+    font-size: 4rem;
+  }
+  .input-area {
+    flex-direction: column;
+    max-width: 95vw;
+    gap: 25px;
+  }
+  .feature-avg-container {
+    padding: 20px 15px;
+  }
+  .feature-table th, .feature-table td {
+    padding: 10px 8px;
+  }
+}
+
